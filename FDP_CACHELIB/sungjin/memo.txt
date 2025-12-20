@@ -1,0 +1,3 @@
+sudo /home/femu/FDP_CACHELIB/opt/cachelib/bin/cachebench -json_test_config \
+	/home/femu/FDP_CACHELIB/cachelib/cachebench/test_configs/ssd_perf/flat_kvcache_reg/config.json \
+	--progress_stats_file=/tmp/graph_cache_leader.log

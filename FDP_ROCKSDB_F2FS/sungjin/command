@@ -1,0 +1,56 @@
+sudo umount /dev/nvme0n1
+
+sudo /home/femu/f2fs-tools-fdp/mkfs/mkfs.f2fs -f -O lost_found /dev/nvme0n1
+
+
+
+sudo mount /dev/nvme0n1 /home/femu/f2fs_fdp_mount/
+
+
+
+
+
+
+
+
+
+
+
+
+
+sudo umount /dev/nvme0n1
+
+sudo /home/femu/f2fs-tools-fdp/mkfs/mkfs.f2fs -f /dev/nvme0n1
+
+
+
+sudo mount /dev/nvme0n1 /home/femu/f2fs_fdp_mount/
+
+
+
+
+
+
+
+
+
+
+sudo FDP_ROCKSDB_F2FS/db_bench --benchmarks="fillrandom,stats" --histogram   -num=20971520 -max_background_compactions=4 -subcompactions=8 -max_background_flushes=4 -value_size=1024 -db=/home/femu/f2fs_fdp_mount
+
+
+
+
+
+
+
+
+
+
+
+
+femu@fvm:~/f2fs_fdp_mount$ ls
+000009.sst  000017.sst  000025.sst  000033.sst  000041.sst  000049.sst  000057.sst  000065.sst  000073.sst  000081.sst  000089.sst  000096.log  LOCK
+000011.sst  000019.sst  000027.sst  000035.sst  000043.sst  000051.sst  000059.sst  000067.sst  000075.sst  000083.sst  000091.sst  000097.sst  LOG
+000013.sst  000021.sst  000029.sst  000037.sst  000045.sst  000053.sst  000061.sst  000069.sst  000077.sst  000085.sst  000093.sst  CURRENT     MANIFEST-000005
+000015.sst  000023.sst  000031.sst  000039.sst  000047.sst  000055.sst  000063.sst  000071.sst  000079.sst  000087.sst  000095.sst  IDENTITY    OPTIONS-000007
+

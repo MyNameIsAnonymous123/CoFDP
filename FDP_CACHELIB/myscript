@@ -1,0 +1,27 @@
+sudo /home/femu/fdp_send_sungjin /dev/nvme0n1
+
+
+
+sudo /home/femu/FDP_CACHELIB/opt/cachelib/bin/cachebench \
+--json_test_config /home/femu/FDP_CACHELIB/sungjin/sangyun_fdp.json
+
+
+
+///////////
+
+
+
+sudo /home/femu/fdp_send_sungjin /dev/nvme0n1
+sudo umount /dev/nvme0n1
+
+sudo /home/femu/f2fs-tools-fdp/mkfs/mkfs.f2fs -f /dev/nvme0n1
+
+
+
+
+sudo /home/femu/f2fs-tools-fdp/fdp_f2fs_mount 1
+
+
+
+sudo /home/femu/FDP_CACHELIB/opt/cachelib/bin/cachebench \
+--json_test_config /home/femu/FDP_CACHELIB/sungjin/sangyun_fs.json

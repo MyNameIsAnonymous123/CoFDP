@@ -1,0 +1,1 @@
+sudo DEBUG_LEVEL=0 make  db_bench -j32 install

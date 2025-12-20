@@ -1,0 +1,4 @@
+sudo rm ./db_bench
+git pull origin $1
+sudo DEBUG_LEVEL=0 ROCKSDB_PLUGINS=torfs make -j$(nproc) db_bench install
+

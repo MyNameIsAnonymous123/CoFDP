@@ -1,0 +1,64 @@
+{
+    "cache_config": {
+    "cacheSizeMB": 440,
+    "allocFactor": 1.5,
+    "maxAllocSize": 1048576,
+    "minAllocSize": 64,
+
+    "navyEnableIoUring": true,
+    "navyQDepth": 1,
+    "deviceEnableFDP" : true,
+
+    "navyReaderThreads": 4,
+    "navyWriterThreads": 4,
+    "nvmCachePaths": ["/dev/nvme0n1"],
+    "writeAmpDeviceList": [
+      "nvme0n1"
+    ],
+
+    "deviceMaxWriteSize": 524288,
+
+    "navyBigHashBucketSize": 4096,
+    "navyBigHashSizePct": 50,
+    "navySmallItemMaxSize": 2048,
+    "navyBlockSize": 4096,
+    "navyParcelMemoryMB": 1024,
+    "nvmCacheSizeMB": 61440,
+    "htBucketPower": 22,
+    "moveOnSlabRelease": true,
+    "poolRebalanceIntervalSec": 2,
+    "rebalanceStrategy": "hits",
+    "rebalanceMinRatio": 0.1,
+    "rebalanceMinSlabs": 2,
+    "navyNumInmemBuffers": 100
+
+
+  },
+  "test_config":
+    {
+      "generator": "workload",
+      "enableLookaside": true,
+
+
+      "numKeys": 16000000,
+      "numOps": 20000000,
+      "numThreads": 4,
+
+
+      "keySizeRange" : [1, 8, 64],
+      "keySizeRangeProbability" : [0.3, 0.7],
+
+      "valSizeRange" : [1, 32, 2048, 10240],
+      "valSizeRangeProbability" : [0.1, 0.2, 0.7],
+      
+      "opDelayNs" : 0,
+      "opDelayBatch": 25,
+
+      "addChainedRatio": 0.0,
+      "setRatio": 0.5,
+      "delRatio": 0.0,
+      "getRatio": 0.5,
+      "loneGetRatio": 0.0
+    }
+
+}

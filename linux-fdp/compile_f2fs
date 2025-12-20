@@ -1,0 +1,6 @@
+sudo make modules M=fs/f2fs -j
+
+sudo make modules_install M=fs/f2fs
+
+sudo rmmod f2fs
+sudo insmod ./fs/f2fs/f2fs.ko
