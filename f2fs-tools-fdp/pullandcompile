@@ -1,0 +1,2 @@
+git pull origin $1
+sudo make -j
