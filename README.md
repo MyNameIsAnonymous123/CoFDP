@@ -15,6 +15,7 @@
      - PID / RG configurable via `femu-scripts/run-fdp.sh`
      - FEMU official image file (u20s.qcow)[https://github.com/MoatLab/FEMU]
 6. **Simple Example Executing CoFDP (Solana Blockchain)**
+   - Note that this script is executed in Emulating Environment (/dev/nvme0n1 = Emulated FDP)
 
    ```bash
    sudo /home/femu/fdp_send_sungjin /dev/nvme0n1
