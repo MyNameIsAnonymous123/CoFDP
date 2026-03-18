@@ -5,6 +5,7 @@
 
 2. **Dependency & Environment**
    - Ubuntu 20.04 (Host, Emulator Both)
+   - pip3 install meson==1.10.0
    - xNVMe: https://xnvme.io/getting_started/index.html
 
 3. **Source Code Description and Step-by-Step**
